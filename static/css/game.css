@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #F9E0DF;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #333;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-size: cover;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    gap: 0;
+}
+
+.mtop {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.turn-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    margin-bottom: 3%;
+    margin-top: 5px
+}
+
+.turn-indicator h1, .turn-indicator h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.turn-indicator {
+    display: inline-block;
+}
+
+.game-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #B19493;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin: auto;
+    gap: 0px;
+    margin-top: 5px
+}
+
+.scoreboard {
+    text-align: center;
+    margin-top: 20px;
+    padding: 7px;
+    border: 2px dashed #D3B8AE;
+    background-color: #FCEFF1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: auto;
+    max-width: 90%;
+    margin: 10px auto;
+    transition: transform 0.3s ease;
+}
+
+.scoreboard:hover {
+    transform: translateY(-5px);
+}
+
+.player-scores h3 {
+    margin: 1% 10%;
+    font-size: 20px;
+    color: #814444;
+    font-weight: bold;
+}
+
+.scoreboard h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #A25656;
+}
+
+.button {
+    display: inline-block;
+    background-color: #594747;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #594747;
+    transform: scale(1.05);
+}
+
+.button:focus {
+    outline: none;
+}
+
+.dice-roll {
+    text-align: center;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.center-buttons {
+    margin-left: 40%;
+}
+
+.dice {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.surrender-button {
+    background-color: #a94442;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    right: 20px;
+}
+
+.surrender-button:hover {
+    background-color: #8a2e2e;
+}
+
+.friends {
+    background-image: url("../img/friend_nonactive.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.enemies {
+    background-image: url("../img/enemy_nonactive.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.neutral {
+    background-size: cover;
+    background-image: "none";
+    background-position: center;
+}
+
+.rules-link-container {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.rules-link-button {
+    display: inline-block;
+    background-color: #594747;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.rules-link-button:hover {
+    background-color: #403030;
+}
+

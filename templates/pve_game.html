@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/game.css">
+    <link rel="stylesheet" href="../static/css/return.css">
+    <title>Страница игры</title>
+    <link rel="icon" type="image/x-icon" href="/static/img/game.png">
+</head>
+<body>
+    <div class="top-buttons">
+        <form action="/" method="get" class="back-button-form">
+            <button type="submit" class="btn_return btn_return-back flash-btn">Назад</button>
+        </form>
+    </div>
+
+    <div class="top-right">
+        <button class="surrender-button flash-btn" id="surrender-btn">Сдаться</button>
+    </div>
+
+    <div class="turn-indicators">
+        <div class="turn-indicator">
+            <h1>Ход красных:</h1>
+            <h2><span id="friends_move_text">Да</span></h2>
+        </div>
+        <div class="turn-indicator">
+            <h1>Ход синих:</h1>
+            <h2><span id="enemies_move_text">Нет</span></h2>
+        </div>
+    </div>
+
+    <div class="mtop">
+        <div class="game-field">
+            <div class="btn-container">
+                <button class="btn enemies" id = "0" disabled="true"></button>
+                <button class="btn enemies" id = "1" disabled="true"></button>
+                <button class="btn enemies" id = "2" disabled="true"></button>
+                <button class="btn enemies" id = "3" disabled="true"></button>
+                <button class="btn enemies" id = "4" disabled="true"></button>
+                <button class="btn enemies" id = "5" disabled="true"></button>
+                <button class="btn enemies" id = "6" disabled="true"></button>
+                <button class="btn enemies" id = "7" disabled="true"></button>
+                <button class="btn enemies" id = "8" disabled="true"></button>
+                <button class="btn enemies" id = "9" disabled="true"></button>
+                <button class="btn enemies" id = "10" disabled="true"></button>
+                <button class="btn enemies" id = "11" disabled="true"></button>
+                <button class="btn enemies" id = "12" disabled="true"></button>
+                <button class="btn enemies" id = "13" disabled="true"></button>
+                <button class="btn enemies" id = "14" disabled="true"></button>
+                <button class="btn enemies" id = "15" disabled="true"></button>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn neutral" id = "16" disabled="true"></button>
+                <button class="btn neutral" id = "17" disabled="true"></button>
+                <button class="btn neutral" id = "18" disabled="true"></button>
+                <button class="btn neutral" id = "19" disabled="true"></button>
+                <button class="btn neutral" id = "20" disabled="true"></button>
+                <button class="btn neutral" id = "21" disabled="true"></button>
+                <button class="btn neutral" id = "22" disabled="true"></button>
+                <button class="btn neutral" id = "23" disabled="true"></button>
+                <button class="btn neutral" id = "24" disabled="true"></button>
+                <button class="btn neutral" id = "25" disabled="true"></button>
+                <button class="btn neutral" id = "26" disabled="true"></button>
+                <button class="btn neutral" id = "27" disabled="true"></button>
+                <button class="btn neutral" id = "28" disabled="true"></button>
+                <button class="btn neutral" id = "29" disabled="true"></button>
+                <button class="btn neutral" id = "30" disabled="true"></button>
+                <button class="btn neutral" id = "31" disabled="true"></button>
+                <button class="btn neutral" id = "32" disabled="true"></button>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn friends" id = "33" disabled="true"></button>
+                <button class="btn friends" id = "34" disabled="true"></button>
+                <button class="btn friends" id = "35" disabled="true"></button>
+                <button class="btn friends" id = "36" disabled="true"></button>
+                <button class="btn friends" id = "37" disabled="true"></button>
+                <button class="btn friends" id = "38" disabled="true"></button>
+                <button class="btn friends" id = "39" disabled="true"></button>
+                <button class="btn friends" id = "40" disabled="true"></button>
+                <button class="btn friends" id = "41" disabled="true"></button>
+                <button class="btn friends" id = "42" disabled="true"></button>
+                <button class="btn friends" id = "43" disabled="true"></button>
+                <button class="btn friends" id = "44" disabled="true"></button>
+                <button class="btn friends" id = "45" disabled="true"></button>
+                <button class="btn friends" id = "46" disabled="true"></button>
+                <button class="btn friends" id = "47" disabled="true"></button>
+                <button class="btn friends" id = "48" disabled="true"></button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="centered_div">
+        <div class="center-buttons">
+            <div class="dice-roll">
+                <button class="button" id="roll_dices">Бросить кости</button>
+            </div>
+    
+            <div class="dice-roll">
+                <button class="button" id="bots_move">Далее</button>
+            </div>
+        </div>
+
+
+        <div class="dice">
+            <div class="dice-item">
+                <h1>Первая кость:</h1>
+                <h2 id="first_dice_text"></h2>
+            </div>
+            <div class="dice-item">
+                <h1>Вторая кость:</h1>
+                <h2 id="second_dice_text"></h2>
+            </div>
+        </div>
+
+        <div class="scoreboard">
+            <h2>Счет:</h2>
+            <div class="player-scores">
+                <h3 data-friends="Красные" data-enemies="Синие">Красные: <span id="friends_score_text">0</span></h3>
+                <h3 data-friends="Синик" data-enemies="Красные">Синие: <span id="enemies_score_text">0</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="rules-link-container">
+        <a href="rules" target="_blank" class="rules-link-button">Перейти к правилам игры</a>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+<script src="../static/js/pve_game.js"></script>
+<script src="../static/js/roll_dices.js"></script>
+<script src="../static/js/surrender.js"></script>
+</body>
+</html>

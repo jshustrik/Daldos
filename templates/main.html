@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="icon" type="image/x-icon" href="/static/img/home.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/main.css">
+
+</head>
+<body>
+    <div class="container">
+        <form action="/create" method="get">
+            <button type="submit" class="btn flash-btn dark">Создать игру</button>
+        </form>
+
+        <br>
+
+        <form action="/enter" method="get">
+            <button type="submit" class="btn flash-btn light">Войти в игру</button>
+        </form>
+
+        <br>
+
+        <form action="/pvp_game" method="get">
+            <button type="submit" class="btn flash-btn light">Игра на двоих</button>
+        </form>
+
+        <br>
+
+        <form action="/pve_game" method="get">
+            <button type="submit" class="btn flash-btn light">Игра с компьютером</button>
+        </form>
+
+        <br>
+
+        <form action="/rules" method="get">
+            <button type="submit" class="btn flash-btn dark">Правила игры</button>
+        </form>
+    </div>
+
+</body>
+</html>

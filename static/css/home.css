@@ -1,0 +1,11 @@
+h1{
+    color: #2fde40;
+}
+p{
+    color: red;
+    background-color: blue;
+}
+button{
+    background-color: blueviolet;
+    margin-top: 50px;
+}

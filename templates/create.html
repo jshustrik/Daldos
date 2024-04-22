@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать игру</title>
+    <link rel="icon" type="image/x-icon" href="/static/img/create.png">
+
+    <link rel="stylesheet" href="../static/css/create.css">
+    <link rel="stylesheet" href="../static/css/return.css">
+</head>
+<body>
+    <div class="back-button-container" style="position: absolute; top: 20px; left: 20px;">
+        <a href="/" class="btn_return_create btn_return-back_create flash-btn">Назад</a>
+    </div>
+    <h2>Создать новую игру</h2>
+    <form id="createRoomForm">
+        <label for="roomName">Название комнаты:</label>
+        <input type="text" id="roomName" name="roomName" placeholder="Введите название комнаты" required>
+        <button type="submit">Создать игру</button>
+    </form>
+
+    <div id="roomIdDisplay" style="display: none;">
+        <span>ID комнаты: <span id="roomIdValue"></span></span>
+        <img src="../static/img/copy_icon.png" id="copyIcon" style="margin-left: 5px;">
+    </div>
+
+    <script src="../static/js/createRoom.js"></script>
+</body>
+</html>
